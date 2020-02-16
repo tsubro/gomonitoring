@@ -1,10 +1,11 @@
 # Go Monitoring
 
 
-> This is a Go Utility for logging metrics
+> This is a Go Utility for logging metrics.
 > Idea of this project was to solve a problem of logging metrics in a periodic interval. eg: If your application keeps calling a huge number of external and you dont wan't to log for each api calls instead of that metric logging will useful to know for a given time interval how many api calls succeded and failed.
 
-> I have also include a common context which will store information that needs to be printed with everytime actuals logs gets emitted (like Java MDC logging)
+> I have also include a common context which will store information that needs to be printed with everytime actuals logs gets emitted (like Java MDC logging).
+
 > Code is still in pre-mature state and I will be obliged if folks here can support me in this learning journey :)
 
 Types of Aggregator available:
