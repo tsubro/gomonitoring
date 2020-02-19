@@ -89,14 +89,14 @@ func (m *monitoring) scheduleEmitter() {
 			case <-done:
 				return
 			case <-ticker.C:
-				m.emitter.Emit(&m.context)
+				m.emitter.Emit(&m.context, &m.aggregator)
 			}
 		}
 	}()
 }
 
 func (m *monitoring) Emit() {
-	m.emitter.Emit(&m.context)
+	m.emitter.Emit(&m.context, &m.aggregator)
 }
 
 func (m *monitoring) Put(source string, logStr string, tag string) {

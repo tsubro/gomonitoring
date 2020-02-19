@@ -13,9 +13,9 @@ var wg sync.WaitGroup
 
 func main() {
 	wg.Add(1)
-	log.Println("Test")
+	log.Info("Test")
 
-	e := emitters.ConsoleEmitterImpl{}
+	e := emitters.FileEmitterImpl{Level : emitters.Info}
 	m := monitoring.GetInstance()
 
 	m.SetAggregatorFrequency(1)
